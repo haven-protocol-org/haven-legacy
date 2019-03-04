@@ -199,12 +199,20 @@ namespace cryptonote
 
         cryptonote::address_parse_info governance_wallet_address;
 
-        if (testnet) {
-          cryptonote::get_account_address_from_str(governance_wallet_address, testnet, ::config::testnet::GOVERNANCE_WALLET_ADDRESS);
+        if (hard_fork_version >= 4) {
+          // shouts to sebseb7
+          if (testnet) {
+            cryptonote::get_account_address_from_str(governance_wallet_address, testnet, ::config::testnet::GOVERNANCE_WALLET_ADDRESS_MULTI);
+          } else {
+            cryptonote::get_account_address_from_str(governance_wallet_address, testnet, ::config::GOVERNANCE_WALLET_ADDRESS_MULTI);
+          }
         } else {
-          cryptonote::get_account_address_from_str(governance_wallet_address, testnet, ::config::GOVERNANCE_WALLET_ADDRESS);
+          if (testnet) {
+            cryptonote::get_account_address_from_str(governance_wallet_address, testnet, ::config::testnet::GOVERNANCE_WALLET_ADDRESS);
+          } else {
+            cryptonote::get_account_address_from_str(governance_wallet_address, testnet, ::config::GOVERNANCE_WALLET_ADDRESS);
+          }
         }
-
 
         crypto::public_key out_eph_public_key = AUTO_VAL_INIT(out_eph_public_key);
 
