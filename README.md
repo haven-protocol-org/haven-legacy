@@ -148,7 +148,7 @@ Tested on a Raspberry Pi Zero with a clean install of minimal Raspbian Stretch (
 ```
 * Clone haven and checkout most recent release version:
 ```
-        git clone https://github.com/havenprotocol/haven.git
+        git clone https://github.com/haven-protocol-org/haven-legacy
 	cd haven
 	git checkout tags/v0.11.0.0
 ```
