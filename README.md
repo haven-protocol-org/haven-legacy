@@ -9,7 +9,7 @@ Portions Copyright (c) 2012-2013 The Cryptonote developers.
 
 - Web: [havenprotocol.com](https://havenprotocol.com)
 - Reddit: [/r/havenprotocol](https://www.reddit.com/r/havenprotocol/)
-- GitHub: [https://github.com/havenprotocol/haven](https://github.com/havenprotocol/haven)
+- GitHub: [https://github.com/haven-protocol-org/haven-legacy](https://github.com/haven-protocol-org/haven-legacy)
 
 
 ## Introduction
