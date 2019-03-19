@@ -912,7 +912,7 @@ namespace cryptonote
     {
   	block b_local = b; //workaround to avoid const errors with do_serialize
   	blobdata bd = get_block_hashing_blob(b);
-  	if(b_local.major_version == CRYPTONOTE_V3_POW_BLOCK_VERSION)
+  	if(b_local.major_version >= CRYPTONOTE_V3_POW_BLOCK_VERSION)
   	{
   		ctx.hash(bd.data(), bd.size(), res.data);
   	}
