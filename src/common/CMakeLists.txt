@@ -70,7 +70,8 @@ set(common_private_headers
   updates.h)
 
 monero_private_headers(common
-  ${common_private_headers})
+  ${common_private_headers}
+  DEPENDS generate_translations_header)
 monero_add_library(common
   ${common_sources}
   ${common_headers}
