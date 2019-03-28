@@ -30,7 +30,9 @@ cmake_minimum_required(VERSION 2.8.7)
 
 project(translations)
 
-add_executable(generate_translations_header generate_translations_header.c)
+IF(NOT CMAKE_CROSSCOMPILING)
+  add_executable(generate_translations_header generate_translations_header.c)
+ENDIF(NOT CMAKE_CROSSCOMPILING)
 
 find_program(LRELEASE lrelease)
 if(LRELEASE STREQUAL "LRELEASE-NOTFOUND")
